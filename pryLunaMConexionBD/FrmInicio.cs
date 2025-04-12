@@ -24,5 +24,14 @@ namespace pryLunaMConexionBD
 
             objConectarBD.ConectarBD();
         }
+
+        private void btnMostrarDatos_Click(object sender, EventArgs e)
+        {
+            clsConexionBD objConexion = new clsConexionBD();
+
+            DataTable tabla = objConexion.ObtenerContactos();
+
+            dgvGrilla.DataSource = tabla;
+        }
     }
 }
