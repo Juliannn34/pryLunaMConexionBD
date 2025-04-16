@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Sql;
 using System.Data.SqlClient;
-
+using MaterialSkin.Controls;
+using MaterialSkin;
 using System.Windows.Forms;
 using System.Data;
 
@@ -65,6 +66,39 @@ namespace pryGestionDeInventario
 
             return tablaContactos;
         }
+
+        public void BuscarID(int ID, MaterialTextBox Nombre, MaterialTextBox Apellido, MaterialTextBox Telefono, MaterialTextBox Correo, MaterialComboBox Categoria)
+        {
+
+            try
+            {
+                using (coneccionBaseDatos = new SqlConnection(cadenaConexion))
+                {
+                    coneccionBaseDatos.Open();
+                    string consulta = "SELECT * FROM Contactos WHERE ID = @Codigo";
+                    comandoBaseDatos = new SqlCommand(consulta, coneccionBaseDatos);
+                    comandoBaseDatos.Parameters.AddWithValue("@Codigo", ID);
+                    SqlDataReader Reader = comandoBaseDatos.ExecuteReader();
+                    while (Reader.Read()) 
+                    { 
+                        Nombre.Text = Reader.GetString(1);
+                        Apellido.Text = Reader.GetString(2);
+                        Telefono.Text = Reader.GetString(3);
+                        Correo.Text = Reader.GetString(4);
+                        Categoria.Text = Reader.GetString(5);
+                       
+                    }
+                    Reader.Close();
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Error al obtener datos: " + error.Message);
+            }
+
+
+        }
+
 
         public void AgregarContacto(string nombre, string apellido, string telefono, string correo, string categoriaId)
         {

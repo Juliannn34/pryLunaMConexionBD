@@ -30,6 +30,7 @@
         {
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnRecargarGillaAgregar = new System.Windows.Forms.Button();
             this.cmbCategoriasContactoAgregar = new MaterialSkin.Controls.MaterialComboBox();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.btnAgregarContacto = new MaterialSkin.Controls.MaterialButton();
@@ -43,6 +44,7 @@
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.txtNombreContactoAgregar = new MaterialSkin.Controls.MaterialTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnRecargarGrillaModificar = new System.Windows.Forms.Button();
             this.btnModificarCategoriaContacto = new MaterialSkin.Controls.MaterialButton();
             this.btnModificarTelefonoContacto = new MaterialSkin.Controls.MaterialButton();
             this.btnModificarCorreoContacto = new MaterialSkin.Controls.MaterialButton();
@@ -50,7 +52,7 @@
             this.txtIdContactoModificar = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
             this.dgvModificarContactos = new System.Windows.Forms.DataGridView();
-            this.txtNombreProdructoModificar = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtNombreContactoModificar = new MaterialSkin.Controls.MaterialTextBox();
             this.txtApellidoContactoModificar = new MaterialSkin.Controls.MaterialTextBox();
             this.txtTelefonoContactoModificar = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
@@ -62,6 +64,7 @@
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.cmbCategoriaContactoModificar = new MaterialSkin.Controls.MaterialComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnRecargarEliminar = new System.Windows.Forms.Button();
             this.txtEliminarIdContacto = new MaterialSkin.Controls.MaterialTextBox();
             this.materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
             this.btnEliminarIdContacto = new MaterialSkin.Controls.MaterialButton();
@@ -70,9 +73,19 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.btnRecargarEliminar = new System.Windows.Forms.Button();
-            this.btnRecargarGillaAgregar = new System.Windows.Forms.Button();
-            this.btnRecargarGrillaModificar = new System.Windows.Forms.Button();
+            this.btnAgregarProducto = new MaterialSkin.Controls.MaterialButton();
+            this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtNombreProductoAgregar = new MaterialSkin.Controls.MaterialTextBox();
+            this.materialLabel14 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel15 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel16 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel17 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtDescripcionProductoAgregar = new MaterialSkin.Controls.MaterialTextBox();
+            this.dgvProductoAgregar = new System.Windows.Forms.DataGridView();
+            this.txtStockProductoAgregar = new MaterialSkin.Controls.MaterialTextBox();
+            this.txtPrecioProductoAgregar = new MaterialSkin.Controls.MaterialTextBox();
+            this.cmbCategoriasProductoAgregar = new MaterialSkin.Controls.MaterialComboBox();
+            this.btnBuscarIDContactos = new MaterialSkin.Controls.MaterialButton();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContactosAgregar)).BeginInit();
@@ -80,6 +93,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvModificarContactos)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEliminarContacto)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductoAgregar)).BeginInit();
             this.SuspendLayout();
             // 
             // materialTabControl1
@@ -124,6 +139,24 @@
             this.tabPage1.Text = "Agregar Contactos";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
+            // btnRecargarGillaAgregar
+            // 
+            this.btnRecargarGillaAgregar.BackColor = System.Drawing.Color.Transparent;
+            this.btnRecargarGillaAgregar.BackgroundImage = global::pryLunaMConexionBD.Properties.Resources._14025098;
+            this.btnRecargarGillaAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRecargarGillaAgregar.CausesValidation = false;
+            this.btnRecargarGillaAgregar.FlatAppearance.BorderSize = 0;
+            this.btnRecargarGillaAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecargarGillaAgregar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnRecargarGillaAgregar.Location = new System.Drawing.Point(970, 441);
+            this.btnRecargarGillaAgregar.Name = "btnRecargarGillaAgregar";
+            this.btnRecargarGillaAgregar.Size = new System.Drawing.Size(42, 43);
+            this.btnRecargarGillaAgregar.TabIndex = 12;
+            this.btnRecargarGillaAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecargarGillaAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnRecargarGillaAgregar.UseVisualStyleBackColor = false;
+            this.btnRecargarGillaAgregar.Click += new System.EventHandler(this.btnRecargarGillaAgregar_Click);
+            // 
             // cmbCategoriasContactoAgregar
             // 
             this.cmbCategoriasContactoAgregar.AutoResize = false;
@@ -133,7 +166,7 @@
             this.cmbCategoriasContactoAgregar.DropDownHeight = 174;
             this.cmbCategoriasContactoAgregar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoriasContactoAgregar.DropDownWidth = 121;
-            this.cmbCategoriasContactoAgregar.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbCategoriasContactoAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cmbCategoriasContactoAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cmbCategoriasContactoAgregar.FormattingEnabled = true;
             this.cmbCategoriasContactoAgregar.IntegralHeight = false;
@@ -144,7 +177,7 @@
             this.cmbCategoriasContactoAgregar.Name = "cmbCategoriasContactoAgregar";
             this.cmbCategoriasContactoAgregar.Size = new System.Drawing.Size(252, 49);
             this.cmbCategoriasContactoAgregar.StartIndex = 0;
-            this.cmbCategoriasContactoAgregar.TabIndex = 11;
+            this.cmbCategoriasContactoAgregar.TabIndex = 5;
             // 
             // materialLabel5
             // 
@@ -171,7 +204,7 @@
             this.btnAgregarContacto.Name = "btnAgregarContacto";
             this.btnAgregarContacto.NoAccentTextColor = System.Drawing.Color.Empty;
             this.btnAgregarContacto.Size = new System.Drawing.Size(169, 36);
-            this.btnAgregarContacto.TabIndex = 9;
+            this.btnAgregarContacto.TabIndex = 6;
             this.btnAgregarContacto.Text = "Agregar Contacto";
             this.btnAgregarContacto.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnAgregarContacto.UseAccentColor = false;
@@ -191,7 +224,7 @@
             this.txtCorreoContactoAgregar.Multiline = false;
             this.txtCorreoContactoAgregar.Name = "txtCorreoContactoAgregar";
             this.txtCorreoContactoAgregar.Size = new System.Drawing.Size(252, 50);
-            this.txtCorreoContactoAgregar.TabIndex = 8;
+            this.txtCorreoContactoAgregar.TabIndex = 4;
             this.txtCorreoContactoAgregar.Text = "";
             this.txtCorreoContactoAgregar.TrailingIcon = null;
             // 
@@ -208,7 +241,7 @@
             this.txtTelefonoContactoAgregar.Multiline = false;
             this.txtTelefonoContactoAgregar.Name = "txtTelefonoContactoAgregar";
             this.txtTelefonoContactoAgregar.Size = new System.Drawing.Size(252, 50);
-            this.txtTelefonoContactoAgregar.TabIndex = 7;
+            this.txtTelefonoContactoAgregar.TabIndex = 3;
             this.txtTelefonoContactoAgregar.Text = "";
             this.txtTelefonoContactoAgregar.TrailingIcon = null;
             // 
@@ -225,7 +258,7 @@
             this.txtApellidoContactoAgregar.Multiline = false;
             this.txtApellidoContactoAgregar.Name = "txtApellidoContactoAgregar";
             this.txtApellidoContactoAgregar.Size = new System.Drawing.Size(252, 50);
-            this.txtApellidoContactoAgregar.TabIndex = 6;
+            this.txtApellidoContactoAgregar.TabIndex = 2;
             this.txtApellidoContactoAgregar.Text = "";
             this.txtApellidoContactoAgregar.TrailingIcon = null;
             // 
@@ -271,7 +304,7 @@
             this.dgvContactosAgregar.Location = new System.Drawing.Point(392, 15);
             this.dgvContactosAgregar.Name = "dgvContactosAgregar";
             this.dgvContactosAgregar.Size = new System.Drawing.Size(620, 393);
-            this.dgvContactosAgregar.TabIndex = 2;
+            this.dgvContactosAgregar.TabIndex = 7;
             // 
             // materialLabel1
             // 
@@ -298,12 +331,13 @@
             this.txtNombreContactoAgregar.Multiline = false;
             this.txtNombreContactoAgregar.Name = "txtNombreContactoAgregar";
             this.txtNombreContactoAgregar.Size = new System.Drawing.Size(252, 50);
-            this.txtNombreContactoAgregar.TabIndex = 0;
+            this.txtNombreContactoAgregar.TabIndex = 1;
             this.txtNombreContactoAgregar.Text = "";
             this.txtNombreContactoAgregar.TrailingIcon = null;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnBuscarIDContactos);
             this.tabPage2.Controls.Add(this.btnRecargarGrillaModificar);
             this.tabPage2.Controls.Add(this.btnModificarCategoriaContacto);
             this.tabPage2.Controls.Add(this.btnModificarTelefonoContacto);
@@ -312,7 +346,7 @@
             this.tabPage2.Controls.Add(this.txtIdContactoModificar);
             this.tabPage2.Controls.Add(this.materialLabel11);
             this.tabPage2.Controls.Add(this.dgvModificarContactos);
-            this.tabPage2.Controls.Add(this.txtNombreProdructoModificar);
+            this.tabPage2.Controls.Add(this.txtNombreContactoModificar);
             this.tabPage2.Controls.Add(this.txtApellidoContactoModificar);
             this.tabPage2.Controls.Add(this.txtTelefonoContactoModificar);
             this.tabPage2.Controls.Add(this.materialLabel10);
@@ -329,6 +363,24 @@
             this.tabPage2.Size = new System.Drawing.Size(1032, 490);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modificar Contactos";
+            // 
+            // btnRecargarGrillaModificar
+            // 
+            this.btnRecargarGrillaModificar.BackColor = System.Drawing.Color.Transparent;
+            this.btnRecargarGrillaModificar.BackgroundImage = global::pryLunaMConexionBD.Properties.Resources._14025098;
+            this.btnRecargarGrillaModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRecargarGrillaModificar.CausesValidation = false;
+            this.btnRecargarGrillaModificar.FlatAppearance.BorderSize = 0;
+            this.btnRecargarGrillaModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecargarGrillaModificar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnRecargarGrillaModificar.Location = new System.Drawing.Point(987, 444);
+            this.btnRecargarGrillaModificar.Name = "btnRecargarGrillaModificar";
+            this.btnRecargarGrillaModificar.Size = new System.Drawing.Size(42, 43);
+            this.btnRecargarGrillaModificar.TabIndex = 19;
+            this.btnRecargarGrillaModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecargarGrillaModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnRecargarGrillaModificar.UseVisualStyleBackColor = false;
+            this.btnRecargarGrillaModificar.Click += new System.EventHandler(this.btnRecargarGrillaModificar_Click);
             // 
             // btnModificarCategoriaContacto
             // 
@@ -447,22 +499,22 @@
             this.dgvModificarContactos.Size = new System.Drawing.Size(645, 380);
             this.dgvModificarContactos.TabIndex = 11;
             // 
-            // txtNombreProdructoModificar
+            // txtNombreContactoModificar
             // 
-            this.txtNombreProdructoModificar.AnimateReadOnly = false;
-            this.txtNombreProdructoModificar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombreProdructoModificar.Depth = 0;
-            this.txtNombreProdructoModificar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtNombreProdructoModificar.LeadingIcon = null;
-            this.txtNombreProdructoModificar.Location = new System.Drawing.Point(110, 79);
-            this.txtNombreProdructoModificar.MaxLength = 50;
-            this.txtNombreProdructoModificar.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtNombreProdructoModificar.Multiline = false;
-            this.txtNombreProdructoModificar.Name = "txtNombreProdructoModificar";
-            this.txtNombreProdructoModificar.Size = new System.Drawing.Size(237, 50);
-            this.txtNombreProdructoModificar.TabIndex = 10;
-            this.txtNombreProdructoModificar.Text = "";
-            this.txtNombreProdructoModificar.TrailingIcon = null;
+            this.txtNombreContactoModificar.AnimateReadOnly = false;
+            this.txtNombreContactoModificar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreContactoModificar.Depth = 0;
+            this.txtNombreContactoModificar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNombreContactoModificar.LeadingIcon = null;
+            this.txtNombreContactoModificar.Location = new System.Drawing.Point(110, 79);
+            this.txtNombreContactoModificar.MaxLength = 50;
+            this.txtNombreContactoModificar.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtNombreContactoModificar.Multiline = false;
+            this.txtNombreContactoModificar.Name = "txtNombreContactoModificar";
+            this.txtNombreContactoModificar.Size = new System.Drawing.Size(237, 50);
+            this.txtNombreContactoModificar.TabIndex = 10;
+            this.txtNombreContactoModificar.Text = "";
+            this.txtNombreContactoModificar.TrailingIcon = null;
             // 
             // txtApellidoContactoModificar
             // 
@@ -604,7 +656,7 @@
             this.cmbCategoriaContactoModificar.DropDownHeight = 174;
             this.cmbCategoriaContactoModificar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCategoriaContactoModificar.DropDownWidth = 121;
-            this.cmbCategoriaContactoModificar.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbCategoriaContactoModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cmbCategoriaContactoModificar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cmbCategoriaContactoModificar.FormattingEnabled = true;
             this.cmbCategoriaContactoModificar.IntegralHeight = false;
@@ -630,6 +682,24 @@
             this.tabPage3.Size = new System.Drawing.Size(1032, 490);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Eliminar Contactos";
+            // 
+            // btnRecargarEliminar
+            // 
+            this.btnRecargarEliminar.BackColor = System.Drawing.Color.Transparent;
+            this.btnRecargarEliminar.BackgroundImage = global::pryLunaMConexionBD.Properties.Resources._14025098;
+            this.btnRecargarEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRecargarEliminar.CausesValidation = false;
+            this.btnRecargarEliminar.FlatAppearance.BorderSize = 0;
+            this.btnRecargarEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecargarEliminar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnRecargarEliminar.Location = new System.Drawing.Point(984, 444);
+            this.btnRecargarEliminar.Name = "btnRecargarEliminar";
+            this.btnRecargarEliminar.Size = new System.Drawing.Size(42, 43);
+            this.btnRecargarEliminar.TabIndex = 4;
+            this.btnRecargarEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecargarEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btnRecargarEliminar.UseVisualStyleBackColor = false;
+            this.btnRecargarEliminar.Click += new System.EventHandler(this.btnRecargarEliminar_Click);
             // 
             // txtEliminarIdContacto
             // 
@@ -698,6 +768,18 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.cmbCategoriasProductoAgregar);
+            this.tabPage5.Controls.Add(this.dgvProductoAgregar);
+            this.tabPage5.Controls.Add(this.txtStockProductoAgregar);
+            this.tabPage5.Controls.Add(this.txtDescripcionProductoAgregar);
+            this.tabPage5.Controls.Add(this.txtPrecioProductoAgregar);
+            this.tabPage5.Controls.Add(this.materialLabel17);
+            this.tabPage5.Controls.Add(this.materialLabel16);
+            this.tabPage5.Controls.Add(this.materialLabel15);
+            this.tabPage5.Controls.Add(this.materialLabel14);
+            this.tabPage5.Controls.Add(this.txtNombreProductoAgregar);
+            this.tabPage5.Controls.Add(this.materialLabel13);
+            this.tabPage5.Controls.Add(this.btnAgregarProducto);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -723,59 +805,203 @@
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Eliminar Productos";
             // 
-            // btnRecargarEliminar
+            // btnAgregarProducto
             // 
-            this.btnRecargarEliminar.BackColor = System.Drawing.Color.Transparent;
-            this.btnRecargarEliminar.BackgroundImage = global::pryLunaMConexionBD.Properties.Resources._14025098;
-            this.btnRecargarEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRecargarEliminar.CausesValidation = false;
-            this.btnRecargarEliminar.FlatAppearance.BorderSize = 0;
-            this.btnRecargarEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecargarEliminar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRecargarEliminar.Location = new System.Drawing.Point(984, 444);
-            this.btnRecargarEliminar.Name = "btnRecargarEliminar";
-            this.btnRecargarEliminar.Size = new System.Drawing.Size(42, 43);
-            this.btnRecargarEliminar.TabIndex = 4;
-            this.btnRecargarEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecargarEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnRecargarEliminar.UseVisualStyleBackColor = false;
-            this.btnRecargarEliminar.Click += new System.EventHandler(this.btnRecargarEliminar_Click);
+            this.btnAgregarProducto.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAgregarProducto.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnAgregarProducto.Depth = 0;
+            this.btnAgregarProducto.HighEmphasis = true;
+            this.btnAgregarProducto.Icon = null;
+            this.btnAgregarProducto.Location = new System.Drawing.Point(134, 387);
+            this.btnAgregarProducto.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnAgregarProducto.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnAgregarProducto.Name = "btnAgregarProducto";
+            this.btnAgregarProducto.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnAgregarProducto.Size = new System.Drawing.Size(158, 36);
+            this.btnAgregarProducto.TabIndex = 0;
+            this.btnAgregarProducto.Text = "Agregar Producto";
+            this.btnAgregarProducto.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnAgregarProducto.UseAccentColor = false;
+            this.btnAgregarProducto.UseVisualStyleBackColor = true;
             // 
-            // btnRecargarGillaAgregar
+            // materialLabel13
             // 
-            this.btnRecargarGillaAgregar.BackColor = System.Drawing.Color.Transparent;
-            this.btnRecargarGillaAgregar.BackgroundImage = global::pryLunaMConexionBD.Properties.Resources._14025098;
-            this.btnRecargarGillaAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRecargarGillaAgregar.CausesValidation = false;
-            this.btnRecargarGillaAgregar.FlatAppearance.BorderSize = 0;
-            this.btnRecargarGillaAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecargarGillaAgregar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRecargarGillaAgregar.Location = new System.Drawing.Point(970, 441);
-            this.btnRecargarGillaAgregar.Name = "btnRecargarGillaAgregar";
-            this.btnRecargarGillaAgregar.Size = new System.Drawing.Size(42, 43);
-            this.btnRecargarGillaAgregar.TabIndex = 12;
-            this.btnRecargarGillaAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecargarGillaAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnRecargarGillaAgregar.UseVisualStyleBackColor = false;
-            this.btnRecargarGillaAgregar.Click += new System.EventHandler(this.btnRecargarGillaAgregar_Click);
+            this.materialLabel13.AutoSize = true;
+            this.materialLabel13.Depth = 0;
+            this.materialLabel13.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel13.Location = new System.Drawing.Point(29, 31);
+            this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel13.Name = "materialLabel13";
+            this.materialLabel13.Size = new System.Drawing.Size(61, 19);
+            this.materialLabel13.TabIndex = 1;
+            this.materialLabel13.Text = "Nombre:";
             // 
-            // btnRecargarGrillaModificar
+            // txtNombreProductoAgregar
             // 
-            this.btnRecargarGrillaModificar.BackColor = System.Drawing.Color.Transparent;
-            this.btnRecargarGrillaModificar.BackgroundImage = global::pryLunaMConexionBD.Properties.Resources._14025098;
-            this.btnRecargarGrillaModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRecargarGrillaModificar.CausesValidation = false;
-            this.btnRecargarGrillaModificar.FlatAppearance.BorderSize = 0;
-            this.btnRecargarGrillaModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecargarGrillaModificar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnRecargarGrillaModificar.Location = new System.Drawing.Point(987, 444);
-            this.btnRecargarGrillaModificar.Name = "btnRecargarGrillaModificar";
-            this.btnRecargarGrillaModificar.Size = new System.Drawing.Size(42, 43);
-            this.btnRecargarGrillaModificar.TabIndex = 19;
-            this.btnRecargarGrillaModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRecargarGrillaModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnRecargarGrillaModificar.UseVisualStyleBackColor = false;
-            this.btnRecargarGrillaModificar.Click += new System.EventHandler(this.btnRecargarGrillaModificar_Click);
+            this.txtNombreProductoAgregar.AnimateReadOnly = false;
+            this.txtNombreProductoAgregar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreProductoAgregar.Depth = 0;
+            this.txtNombreProductoAgregar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNombreProductoAgregar.LeadingIcon = null;
+            this.txtNombreProductoAgregar.Location = new System.Drawing.Point(170, 17);
+            this.txtNombreProductoAgregar.MaxLength = 50;
+            this.txtNombreProductoAgregar.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtNombreProductoAgregar.Multiline = false;
+            this.txtNombreProductoAgregar.Name = "txtNombreProductoAgregar";
+            this.txtNombreProductoAgregar.Size = new System.Drawing.Size(213, 50);
+            this.txtNombreProductoAgregar.TabIndex = 2;
+            this.txtNombreProductoAgregar.Text = "";
+            this.txtNombreProductoAgregar.TrailingIcon = null;
+            // 
+            // materialLabel14
+            // 
+            this.materialLabel14.AutoSize = true;
+            this.materialLabel14.Depth = 0;
+            this.materialLabel14.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel14.Location = new System.Drawing.Point(29, 107);
+            this.materialLabel14.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel14.Name = "materialLabel14";
+            this.materialLabel14.Size = new System.Drawing.Size(88, 19);
+            this.materialLabel14.TabIndex = 3;
+            this.materialLabel14.Text = "Descripcion:";
+            // 
+            // materialLabel15
+            // 
+            this.materialLabel15.AutoSize = true;
+            this.materialLabel15.Depth = 0;
+            this.materialLabel15.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel15.Location = new System.Drawing.Point(29, 180);
+            this.materialLabel15.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel15.Name = "materialLabel15";
+            this.materialLabel15.Size = new System.Drawing.Size(49, 19);
+            this.materialLabel15.TabIndex = 4;
+            this.materialLabel15.Text = "Precio:";
+            // 
+            // materialLabel16
+            // 
+            this.materialLabel16.AutoSize = true;
+            this.materialLabel16.Depth = 0;
+            this.materialLabel16.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel16.Location = new System.Drawing.Point(29, 254);
+            this.materialLabel16.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel16.Name = "materialLabel16";
+            this.materialLabel16.Size = new System.Drawing.Size(45, 19);
+            this.materialLabel16.TabIndex = 5;
+            this.materialLabel16.Text = "Stock:";
+            // 
+            // materialLabel17
+            // 
+            this.materialLabel17.AutoSize = true;
+            this.materialLabel17.Depth = 0;
+            this.materialLabel17.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel17.Location = new System.Drawing.Point(29, 324);
+            this.materialLabel17.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel17.Name = "materialLabel17";
+            this.materialLabel17.Size = new System.Drawing.Size(73, 19);
+            this.materialLabel17.TabIndex = 6;
+            this.materialLabel17.Text = "Categoria:";
+            this.materialLabel17.Click += new System.EventHandler(this.materialLabel17_Click);
+            // 
+            // txtDescripcionProductoAgregar
+            // 
+            this.txtDescripcionProductoAgregar.AnimateReadOnly = false;
+            this.txtDescripcionProductoAgregar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescripcionProductoAgregar.Depth = 0;
+            this.txtDescripcionProductoAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtDescripcionProductoAgregar.LeadingIcon = null;
+            this.txtDescripcionProductoAgregar.Location = new System.Drawing.Point(170, 88);
+            this.txtDescripcionProductoAgregar.MaxLength = 50;
+            this.txtDescripcionProductoAgregar.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtDescripcionProductoAgregar.Multiline = false;
+            this.txtDescripcionProductoAgregar.Name = "txtDescripcionProductoAgregar";
+            this.txtDescripcionProductoAgregar.Size = new System.Drawing.Size(213, 50);
+            this.txtDescripcionProductoAgregar.TabIndex = 9;
+            this.txtDescripcionProductoAgregar.Text = "";
+            this.txtDescripcionProductoAgregar.TrailingIcon = null;
+            // 
+            // dgvProductoAgregar
+            // 
+            this.dgvProductoAgregar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProductoAgregar.Location = new System.Drawing.Point(424, 17);
+            this.dgvProductoAgregar.Name = "dgvProductoAgregar";
+            this.dgvProductoAgregar.Size = new System.Drawing.Size(602, 340);
+            this.dgvProductoAgregar.TabIndex = 11;
+            // 
+            // txtStockProductoAgregar
+            // 
+            this.txtStockProductoAgregar.AnimateReadOnly = false;
+            this.txtStockProductoAgregar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtStockProductoAgregar.Depth = 0;
+            this.txtStockProductoAgregar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtStockProductoAgregar.LeadingIcon = null;
+            this.txtStockProductoAgregar.Location = new System.Drawing.Point(170, 238);
+            this.txtStockProductoAgregar.MaxLength = 50;
+            this.txtStockProductoAgregar.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtStockProductoAgregar.Multiline = false;
+            this.txtStockProductoAgregar.Name = "txtStockProductoAgregar";
+            this.txtStockProductoAgregar.Size = new System.Drawing.Size(213, 50);
+            this.txtStockProductoAgregar.TabIndex = 10;
+            this.txtStockProductoAgregar.Text = "";
+            this.txtStockProductoAgregar.TrailingIcon = null;
+            // 
+            // txtPrecioProductoAgregar
+            // 
+            this.txtPrecioProductoAgregar.AnimateReadOnly = false;
+            this.txtPrecioProductoAgregar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPrecioProductoAgregar.Depth = 0;
+            this.txtPrecioProductoAgregar.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtPrecioProductoAgregar.LeadingIcon = null;
+            this.txtPrecioProductoAgregar.Location = new System.Drawing.Point(170, 164);
+            this.txtPrecioProductoAgregar.MaxLength = 50;
+            this.txtPrecioProductoAgregar.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtPrecioProductoAgregar.Multiline = false;
+            this.txtPrecioProductoAgregar.Name = "txtPrecioProductoAgregar";
+            this.txtPrecioProductoAgregar.Size = new System.Drawing.Size(213, 50);
+            this.txtPrecioProductoAgregar.TabIndex = 8;
+            this.txtPrecioProductoAgregar.Text = "";
+            this.txtPrecioProductoAgregar.TrailingIcon = null;
+            // 
+            // cmbCategoriasProductoAgregar
+            // 
+            this.cmbCategoriasProductoAgregar.AutoResize = false;
+            this.cmbCategoriasProductoAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cmbCategoriasProductoAgregar.Depth = 0;
+            this.cmbCategoriasProductoAgregar.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cmbCategoriasProductoAgregar.DropDownHeight = 174;
+            this.cmbCategoriasProductoAgregar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCategoriasProductoAgregar.DropDownWidth = 121;
+            this.cmbCategoriasProductoAgregar.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cmbCategoriasProductoAgregar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cmbCategoriasProductoAgregar.FormattingEnabled = true;
+            this.cmbCategoriasProductoAgregar.IntegralHeight = false;
+            this.cmbCategoriasProductoAgregar.ItemHeight = 43;
+            this.cmbCategoriasProductoAgregar.Location = new System.Drawing.Point(170, 308);
+            this.cmbCategoriasProductoAgregar.MaxDropDownItems = 4;
+            this.cmbCategoriasProductoAgregar.MouseState = MaterialSkin.MouseState.OUT;
+            this.cmbCategoriasProductoAgregar.Name = "cmbCategoriasProductoAgregar";
+            this.cmbCategoriasProductoAgregar.Size = new System.Drawing.Size(213, 49);
+            this.cmbCategoriasProductoAgregar.StartIndex = 0;
+            this.cmbCategoriasProductoAgregar.TabIndex = 12;
+            // 
+            // btnBuscarIDContactos
+            // 
+            this.btnBuscarIDContactos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnBuscarIDContactos.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnBuscarIDContactos.Depth = 0;
+            this.btnBuscarIDContactos.HighEmphasis = true;
+            this.btnBuscarIDContactos.Icon = null;
+            this.btnBuscarIDContactos.Location = new System.Drawing.Point(230, 19);
+            this.btnBuscarIDContactos.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnBuscarIDContactos.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnBuscarIDContactos.Name = "btnBuscarIDContactos";
+            this.btnBuscarIDContactos.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnBuscarIDContactos.Size = new System.Drawing.Size(171, 36);
+            this.btnBuscarIDContactos.TabIndex = 20;
+            this.btnBuscarIDContactos.Text = "buscar por ID";
+            this.btnBuscarIDContactos.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnBuscarIDContactos.UseAccentColor = false;
+            this.btnBuscarIDContactos.UseVisualStyleBackColor = true;
+            this.btnBuscarIDContactos.Click += new System.EventHandler(this.btnBuscarIDContactos_Click);
             // 
             // FrmInicio
             // 
@@ -799,6 +1025,9 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEliminarContacto)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductoAgregar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -833,7 +1062,7 @@
         private MaterialSkin.Controls.MaterialButton btnModificarContacto;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private MaterialSkin.Controls.MaterialComboBox cmbCategoriaContactoModificar;
-        private MaterialSkin.Controls.MaterialTextBox txtNombreProdructoModificar;
+        private MaterialSkin.Controls.MaterialTextBox txtNombreContactoModificar;
         private MaterialSkin.Controls.MaterialTextBox txtApellidoContactoModificar;
         private MaterialSkin.Controls.MaterialTextBox txtTelefonoContactoModificar;
         private System.Windows.Forms.DataGridView dgvModificarContactos;
@@ -850,6 +1079,19 @@
         private System.Windows.Forms.Button btnRecargarEliminar;
         private System.Windows.Forms.Button btnRecargarGillaAgregar;
         private System.Windows.Forms.Button btnRecargarGrillaModificar;
+        private System.Windows.Forms.DataGridView dgvProductoAgregar;
+        private MaterialSkin.Controls.MaterialTextBox txtDescripcionProductoAgregar;
+        private MaterialSkin.Controls.MaterialLabel materialLabel17;
+        private MaterialSkin.Controls.MaterialLabel materialLabel16;
+        private MaterialSkin.Controls.MaterialLabel materialLabel15;
+        private MaterialSkin.Controls.MaterialLabel materialLabel14;
+        private MaterialSkin.Controls.MaterialTextBox txtNombreProductoAgregar;
+        private MaterialSkin.Controls.MaterialLabel materialLabel13;
+        private MaterialSkin.Controls.MaterialButton btnAgregarProducto;
+        private MaterialSkin.Controls.MaterialComboBox cmbCategoriasProductoAgregar;
+        private MaterialSkin.Controls.MaterialTextBox txtStockProductoAgregar;
+        private MaterialSkin.Controls.MaterialTextBox txtPrecioProductoAgregar;
+        private MaterialSkin.Controls.MaterialButton btnBuscarIDContactos;
     }
 }
 

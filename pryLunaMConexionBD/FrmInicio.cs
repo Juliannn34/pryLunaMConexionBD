@@ -99,7 +99,7 @@ namespace pryLunaMConexionBD
                 return;
             }
 
-            string nuevoNombre = txtNombreProdructoModificar.Text;
+            string nuevoNombre = txtNombreContactoModificar.Text;
 
             if (string.IsNullOrWhiteSpace(nuevoNombre))
             {
@@ -367,6 +367,25 @@ namespace pryLunaMConexionBD
         {
             RecargarGrillaContactos();
             MessageBox.Show("Grilla actualizada.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void materialLabel17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscarIDContactos_Click(object sender, EventArgs e)
+        {
+            int Id = Convert.ToInt16(txtIdContactoModificar.Text);
+          
+
+            clsConexionBD conectarBD = new clsConexionBD();
+
+            conectarBD.BuscarID(Id, txtNombreContactoModificar, txtApellidoContactoModificar, txtTelefonoContactoModificar,
+                txtCorreoContactoModificar, cmbCategoriasContactoAgregar);
+
+
+
         }
     }
 }
